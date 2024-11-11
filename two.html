@@ -1,0 +1,77 @@
+<script>
+
+  // Q1) Remove Duplicate values from array.
+  let arr = [1, 1, 1, 2, 2, 23, 3, 4, 4, 5, 5, 6, 6, 6, 7, 7, 8, 8, 9, 9];
+  let newArray = [...new Set(arr)]
+  console.log(newArray)
+
+  // Q2) Program to reverse the integer number.
+  // Input : x = 123   output: 321
+  const revInt = (num) => {
+    let myRevnum = parseInt(num.toString().split("").reverse().join(""));
+    // console.log(myRevnum);
+  }
+  revInt(123)
+
+  // Q4) Program to reverse the minus integer number.
+  const reverInt = (num) => {
+    let isNegative = num < 0;
+    let myReverNum = Math.abs(num).toString().split("").reverse().join("");
+    myReverNum = parseInt(myReverNum);
+
+    if (isNegative) {
+      myReverNum = -myReverNum;
+    }
+    return myReverNum;
+  }
+  // console.log(reverInt(-123));
+
+  // Q5) Fibonacci Series
+  const number = 8;
+  let n1 = 0, n2 = 1, nextTerm;
+  for (let i = 1; i <= number; i++) {
+    console.log(n1);
+    nextTerm = n1 + n2;
+    n1 = n2;
+    n2 = nextTerm;
+  }
+
+
+  let str = "aabbbccd";
+  let result = "";
+  let count = 1;
+  for (let i = 0; i < str.length; i++) {
+    if (str[i] === str[i + 1]) {
+      count++;
+    }
+    else {
+      result = result + count + str[i];
+      count = 1;
+    }
+  }
+  console.log(result)
+
+  // To add the number of array
+  let darr = [4, 7, 1, 4, 9, 2, 4, 1];
+  let sum = darr.reduce((x, y) => {
+    return x + y
+  })
+  // console.log(sum)
+
+  // How to remove duplicate values from an array
+  let res = [...new Set(darr)];
+  console.log(res);
+
+  function fruit() {
+    console.log(name);
+    console.log(price);
+    var name = 'apple'
+    let price = 20
+  }
+  fruit()
+
+
+
+
+
+</script>

@@ -1,0 +1,34 @@
+<script>
+  let str = "aabbbccd";
+  let result = "";
+  let count = 1;
+  for (let i = 0; i < str.length; i++) {
+    if (str[i] === str[i + 1]) {
+      count++;
+    }
+    else {
+      result = result + count + str[i];
+      count = 1;
+    }
+  }
+  console.log(result)
+
+  let dd = { name: 'saket' }
+  let dc = { name: 'saket' }
+  console.log(dd === dc)
+
+  let ab = [name = 'kumar']
+  let cd = [name = 'kumar']
+  console.log(ab === cd)
+
+  let ard = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+  for (let i = 0; i < ard.length - 1; i++) {
+    console.log(ard[i])
+  }
+
+  ard.forEach(function (element) {
+
+    console.log(element);
+
+  });
+</script>
